@@ -1,0 +1,59 @@
+<div class="modal fade" id="modal-signup" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p id="link-error" class="alert-dismissable alert-dark-primary alert alert"></p>
+                <div class="modal-header">
+                    <h5 class="modal-title">Signup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="recipe-create-form" method="post" enctype="multipart/form-data" action="{% url 'account:signup' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="floating-label" for="Email">Email</label>
+                                    <input required type="email" name="email" class="form-control" id="Email" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="floating-label" for="Username">Username</label>
+                                    <input required type="text" name="username" class="form-control" id="Username" placeholder="Enter your username">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="floating-label" for="Firstname">Firstname</label>
+                                    <input required type="text" name="first_name" class="form-control" id="Firstname" placeholder="Enter your firstname">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="floating-label" for="Lastname">Lastname</label>
+                                    <input required type="text" name="last_name" class="form-control" id="Lastname" placeholder="Enter your lastname">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group fill">
+                                    <label class="floating-label" for="Password1">Password</label>
+                                    <input required type="password" name="password1" class="form-control" id="Password1" placeholder="Enter your password">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group fill">
+                                    <label class="floating-label" for="Password2">Confirm Password</label>
+                                    <input required type="password" name="password2" class="form-control" id="Password2" placeholder="Enter your password again">
+                                </div>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary" aria-label="Close">Submit</button>
+                        <button class="btn btn-danger">Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
